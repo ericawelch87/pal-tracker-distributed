@@ -1,6 +1,9 @@
 apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 
+configurations {
+    compile.exclude module: "spring-boot-starter-tomcat"
+}
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudDependenciesVersion"
@@ -9,6 +12,7 @@ dependencyManagement {
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-jetty"
     compile "org.springframework.cloud:spring-cloud-starter-eureka-server"
 
 }
