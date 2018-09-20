@@ -1,0 +1,7 @@
+applications:
+- name: tracker-eureka
+  path: ./platform-services/eureka-server/build/libs/eureka-server.jar
+  routes:
+  - route: eureka-pal-erica.apps.evans.pal.pivotal.io
+  memory: 1G
+  instances: 1
