@@ -81,7 +81,7 @@ jobs:
         - echo "Deploying timesheets server $RELEASE_TAG"
       deploy:
         <<: *cloudfoundry
-      stage: deploy
+    - stage: deploy
       language: bash
       script:
         - echo "Downloading eureka server $RELEASE_TAG"
