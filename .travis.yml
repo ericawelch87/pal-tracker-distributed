@@ -81,16 +81,16 @@ jobs:
         - echo "Deploying timesheets server $RELEASE_TAG"
       deploy:
         <<: *cloudfoundry
-    - stage: deploy
-      language: bash
-      script:
-        - echo "Downloading eureka server $RELEASE_TAG"
-        - wget -P platform-services/eureka-server/build/libs https://github.com/$GITHUB_USERNAME/pal-tracker-distributed/releases/download/$RELEASE_TAG/eureka-server.jar
-      before_deploy:
-        - cp manifest-eureka.yml manifest.yml
-        - echo "Deploying eureka server $RELEASE_TAG"
-      deploy:
-        <<: *cloudfoundry
+#    - stage: deploy
+#      language: bash
+#      script:
+#        - echo "Downloading eureka server $RELEASE_TAG"
+#        - wget -P platform-services/eureka-server/build/libs https://github.com/$GITHUB_USERNAME/pal-tracker-distributed/releases/download/$RELEASE_TAG/eureka-server.jar
+#      before_deploy:
+#        - cp manifest-eureka.yml manifest.yml
+#        - echo "Deploying eureka server $RELEASE_TAG"
+#      deploy:
+#        <<: *cloudfoundry
     - stage: migrate
       language: java
       before_install:

@@ -8,4 +8,5 @@ applications:
   env:
   services:
   - tracker-timesheets-database
-  - tracker-eureka
+  - tracker-registry-server
+  - tracker-circuit-breaker-dashboard
