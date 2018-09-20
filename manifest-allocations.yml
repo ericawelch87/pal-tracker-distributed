@@ -8,4 +8,4 @@ applications:
   env:
   services:
   - tracker-allocations-database
-  - tracker-service-registry
+  - tracker-eureka
