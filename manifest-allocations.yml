@@ -8,5 +8,5 @@ applications:
   env:
   services:
   - tracker-allocations-database
-  - tracker-registry-server
+  - tracker-service-registry
   - tracker-circuit-breaker-dashboard
